@@ -1,9 +1,10 @@
 import React from 'react';
+import Banner from '../sheared/banner/Banner';
 
 const Home = () => {
     return (
         <div>
-            <h1>homeeddddfdfdfgddggdfgdfdf</h1>
+            <Banner></Banner>
         </div>
     );
 };
