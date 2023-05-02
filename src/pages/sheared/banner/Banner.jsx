@@ -2,9 +2,9 @@ import React from 'react';
 
 const Banner = () => {
     return (
-        <div className='bg-gray-200'>
+        <div className='bg-gray-100'>
             <div className='container mx-auto flex'>
-                <img className='w-full mt-10 rounded-lg' src="https://media.istockphoto.com/id/1198965908/photo/organic-vegan-food.jpg?s=170667a&w=0&k=20&c=N5yEBd1PhX-oscR_Y1V7GggagKiET2ldmM5zYWAsYIc=" alt="" />
+                <img className='w-full mt-10 rounded-lg' src="https://i.ibb.co/1J6wLVB/chef-cooking-harmony-woman-food-big-pot-89485044-removebg-preview.png" alt="" />
                 <div className='h-96 flex justify-center items-center text-center'>
                     <div>
                         <h1 className='text-4xl text-green-500'>Live, taste, enjoy
