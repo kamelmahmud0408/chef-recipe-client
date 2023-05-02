@@ -1,6 +1,7 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import {  HandThumbUpIcon } from '@heroicons/react/24/solid'
+import Racipe from './Recipe'
 
 const ChefDetails = () => {
     const chefDetails = useLoaderData()
@@ -25,6 +26,11 @@ const ChefDetails = () => {
                     </div>
                 </div>
             </div>
+            <section className='container mx-auto grid lg:grid-cols-3'>
+                {
+                    recipes.map(recipe => <Racipe recipe={recipe}></Racipe>)
+                }
+            </section>
         </div>
     );
 };

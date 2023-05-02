@@ -1,5 +1,5 @@
 import React from 'react';
-import { BeakerIcon, HandThumbUpIcon } from '@heroicons/react/24/solid'
+import {  HandThumbUpIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
 
 const ChefCart = ({ chef }) => {
