@@ -7,6 +7,7 @@ import Main from './layout/Main.jsx'
 import Blog from './pages/blog/Blog.jsx'
 import Login from './pages/login/Login.jsx'
 import Home from './pages/home/Home.jsx'
+import ChefDetails from './pages/chefDetails/ChefDetails.jsx'
 
 const router=createBrowserRouter([
   {
@@ -19,6 +20,11 @@ const router=createBrowserRouter([
         loader:()=>fetch('https://the-chef-zone-server-kamelmahmud0408.vercel.app/chefdata')
       },
       {
+        path: 'chefdetails/:id',
+        element: <ChefDetails></ChefDetails>,
+        loader: ({params}) => fetch(`https://the-chef-zone-server-kamelmahmud0408.vercel.app/chefdata/${params.id}`)
+    },
+      {
         path:'/blog',
         element:<Blog></Blog>
       },
@@ -26,6 +32,7 @@ const router=createBrowserRouter([
         path:'/login',
         element:<Login></Login>
       }
+     
 
     ]
   }

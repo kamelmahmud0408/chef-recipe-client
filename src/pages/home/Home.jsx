@@ -7,10 +7,9 @@ import ChefCart from './ChefCart';
 
 const Home = () => {
     const chefData=useLoaderData()
-    console.log(chefData)  
    
     return (
-        <div className='bg-gray-200'>
+        <div className='bg-gray-100'>
             <Banner></Banner>
             <div className='grid lg:grid-cols-3 gap-5 mt-10 container mx-auto'>
                 {
