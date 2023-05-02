@@ -15,7 +15,8 @@ const router=createBrowserRouter([
     children:[
       {
         path:'/',
-        element: <Home></Home>
+        element: <Home></Home>,
+        loader:()=>fetch('https://the-chef-zone-server-kamelmahmud0408.vercel.app/chefdata')
       },
       {
         path:'/blog',
