@@ -4,7 +4,7 @@ const ChefCart = ({ chef }) => {
     const { description, experience, img_url, name, recipes, likes } = chef;
     return (
         <div>
-            <div className="card w-full h-full bg-base-100 shadow-xl">
+            <div className="card w-full h-full bg-base-100 shadow">
                 <figure><img className='w-full h-64' src={img_url} alt="Shoes" /></figure>
                 <div className="card-body">
                     <h2 className="card-title">

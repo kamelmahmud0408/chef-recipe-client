@@ -10,7 +10,7 @@ const Home = () => {
     console.log(chefData)  
    
     return (
-        <div>
+        <div className='bg-gray-200'>
             <Banner></Banner>
             <div className='grid lg:grid-cols-3 gap-5 mt-10 container mx-auto'>
                 {
