@@ -4,7 +4,7 @@ import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Login = () => {
 
-    const{signIn,signInwithGoogle}=useContext(AuthContext)
+    const{signIn,signInwithGoogle,signInwithGithub}=useContext(AuthContext)
   const navigate=useNavigate()
   const location=useLocation()
 
@@ -30,12 +30,23 @@ const Login = () => {
   }
   const handleGoogle=()=>{
     signInwithGoogle()
-    .then(result=>{})
+    .then(result=>{
+        navigate(from,{replace :true})
+    })
     .cacth(error=>{
       console.log(error)
     })
   }
 
+  const handleGithub=()=>{
+    signInwithGithub()
+    .then(result=>{
+        navigate(from,{replace :true})
+    })
+    .cacth(error=>{
+      console.log(error)
+    })
+  }
 
     return (
         <div className='w-[50%]  mx-auto my-10 bg-slate-100 p-5 rounded-xl'>
@@ -53,6 +64,7 @@ const Login = () => {
             </form>
             <div className='mt-10 w-full'>
                   <button onClick={handleGoogle}  className='btn btn-primary w-96'>Login with Google</button>
+                  <button onClick={handleGithub}  className='btn btn-primary w-96 mt-10'>Login with Github</button>
             </div>
             <p><span>  Don't Have an Account? <Link to="/regestration">Register</Link></span></p>
            </div>

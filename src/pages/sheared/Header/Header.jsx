@@ -23,7 +23,7 @@ const Header = () => {
                         <NavLink to='/blog'>Blog</NavLink>
                         <NavLink to='/login'>Login</NavLink>
                         {
-                                user && <span className='text-black'> {user.email} <button onClick={handleLogout}> Log out</button></span>
+                                user && <span className='text-black'> {user.displayName} <button onClick={handleLogout}> Log out</button></span>
                             }
                     </ul>
                 </div>
