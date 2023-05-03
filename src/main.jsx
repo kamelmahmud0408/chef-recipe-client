@@ -9,6 +9,8 @@ import Login from './pages/login/Login.jsx'
 import Home from './pages/home/Home.jsx'
 import ChefDetails from './pages/chefDetails/ChefDetails.jsx'
 import Regestration from './pages/login/Regestration.jsx'
+import AuthProvider from './authProvider/AuthProvider.jsx'
+import PrivetRoute from './privetRoute/PrivetRoute.jsx'
 
 const router=createBrowserRouter([
   {
@@ -22,7 +24,7 @@ const router=createBrowserRouter([
       },
       {
         path: 'chefdetails/:id',
-        element: <ChefDetails></ChefDetails>,
+        element: <PrivetRoute><ChefDetails></ChefDetails></PrivetRoute>,
         loader: ({params}) => fetch(`https://the-chef-zone-server-kamelmahmud0408.vercel.app/chefdata/${params.id}`)
     },
       {
@@ -46,6 +48,6 @@ const router=createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}></RouterProvider>
+    <AuthProvider><RouterProvider router={router}></RouterProvider></AuthProvider>
   </React.StrictMode>,
 )
