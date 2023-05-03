@@ -8,6 +8,7 @@ import Blog from './pages/blog/Blog.jsx'
 import Login from './pages/login/Login.jsx'
 import Home from './pages/home/Home.jsx'
 import ChefDetails from './pages/chefDetails/ChefDetails.jsx'
+import Regestration from './pages/login/Regestration.jsx'
 
 const router=createBrowserRouter([
   {
@@ -31,7 +32,12 @@ const router=createBrowserRouter([
       {
         path:'/login',
         element:<Login></Login>
+      },
+      {
+        path:'/regestration',
+        element:<Regestration></Regestration>
       }
+     
      
 
     ]
