@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
-import { NavLink } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import { AuthContext } from '../../../authProvider/AuthProvider';
+import { getAuth, updateProfile } from 'firebase/auth';
 
 const Header = () => {
     const { user, logOut } = useContext(AuthContext)
@@ -10,6 +11,7 @@ const Header = () => {
             .then(result => { })
             .catch(error => console.error(error));
     }
+    
 
     return (
         <div className='bg-gray-200'>
@@ -21,10 +23,12 @@ const Header = () => {
                     <ul className="menu menu-horizontal px-1 space-x-6">
                         <NavLink to='./'>Home</NavLink>
                         <NavLink to='/blog'>Blog</NavLink>
-                        <NavLink to='/login'>Login</NavLink>
-                        {
-                                user && <span className='text-black'> {user.displayName} <button onClick={handleLogout}> Log out</button></span>
-                            }
+                      {
+                        user ? <div>{
+                            user && <span className='text-black'> {user.displayName} <button onClick={handleLogout}> Log out</button></span>
+                        }</div> :<Link to='/login'><button>Login</button></Link>
+                      }
+                        
                     </ul>
                 </div>
             </div>

@@ -11,11 +11,13 @@ import ChefDetails from './pages/chefDetails/ChefDetails.jsx'
 import Regestration from './pages/login/Regestration.jsx'
 import AuthProvider from './authProvider/AuthProvider.jsx'
 import PrivetRoute from './privetRoute/PrivetRoute.jsx'
+import ErrorPage from '../../job-station-assignment-9/src/components/ErrorPage/ErrorPage.jsx'
 
 const router=createBrowserRouter([
   {
     path:'/',
     element:<Main></Main>,
+    errorElement:<ErrorPage></ErrorPage>,
     children:[
       {
         path:'/',
