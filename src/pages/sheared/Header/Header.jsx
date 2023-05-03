@@ -20,9 +20,9 @@ const Header = () => {
                     <a className="btn btn-ghost normal-case text-3xl text-blue-500">chefZone</a>
                 </div>
                 <div className="flex-none">
-                    <ul className="menu menu-horizontal px-1 space-x-6">
-                        <NavLink to='./'>Home</NavLink>
-                        <NavLink to='/blog'>Blog</NavLink>
+                    <ul className="menu menu-horizontal px-1 text-xl space-x-6">
+                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-800' : 'text-gray-800')}  to='./'>Home</NavLink>
+                        <NavLink className={({ isActive }) => (isActive ? 'text-blue-800 ' : 'text-gray-800')} to='/blog'>Blog</NavLink>
                       {
                         user ? <div>{
                             user && <span className='text-black'> {user.displayName} <button onClick={handleLogout}> Log out</button></span>

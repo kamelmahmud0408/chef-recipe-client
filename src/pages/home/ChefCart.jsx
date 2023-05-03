@@ -1,13 +1,16 @@
 import React from 'react';
 import {  HandThumbUpIcon } from '@heroicons/react/24/solid'
 import { Link } from 'react-router-dom';
+import LazyLoad from 'react-lazy-load';
 
 const ChefCart = ({ chef }) => {
     const {id, description, experience, img_url, name, number_of_recipes, likes } = chef;
     return (
         <div>
             <div className="card w-full h-full bg-base-100 shadow">
+                <LazyLoad height={250} offset={9000} threshold={0.95}>
                 <figure><img className='w-full h-64' src={img_url} alt="Shoes" /></figure>
+                </LazyLoad>
                 <div className="card-body">
                     <h2 className="card-title">
                         {name}
