@@ -6,4 +6,4 @@
 * The answer of questions is shown on the blog page.
 * User authentication 
 
-## [Food Station website link](https://the-chef-zone-client.web.app/s)
+## [Food Station website link](https://the-chef-zone-client.web.app/)
