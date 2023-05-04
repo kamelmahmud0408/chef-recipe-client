@@ -5,6 +5,8 @@ import { AuthContext } from '../../authProvider/AuthProvider';
 
 const Login = () => {
   
+  const [error, setError] = useState('')
+
   const{signIn,signInwithGoogle,signInwithGithub}=useContext(AuthContext)
   const navigate=useNavigate()
   const location=useLocation()
@@ -18,7 +20,7 @@ const Login = () => {
     const email=form.email.value;
     const password=form.password.value;
     
-
+   setError('')
     signIn(email,password)
     .then(result=>{
       const loggedUser=result.user;
@@ -27,7 +29,8 @@ const Login = () => {
       navigate(from,{replace :true})
     })
     .catch(error=>{
-      console.log(error)
+      console.log(error.message)
+      setError(error.message)
       
     })
   }
@@ -66,12 +69,14 @@ const Login = () => {
                     <input className='border w-96 p-2 mt-4' type="password" name="password" id="" placeholder='Your Password' required />
                   </div>
                   <input className='mt-7 border text-xl py-2 px-5 rounded-md text-white bg-blue-600' type="submit" value="Submit" />
+                  <p className='text-red-600 mt-4'>{error}</p>
             </form>
             <div className='mt-10 w-full'>
                   <button onClick={handleGoogle}  className='btn btn-primary w-96'>Login with Google</button>
                   <button onClick={handleGithub}  className='btn btn-primary w-96 mt-5'>Login with Github</button>
             </div>
             <p className='mt-5'><span>  Don't Have an Account? <Link className='text-blue-600' to="/regestration">Register</Link></span></p>
+            
            </div>
         
     );

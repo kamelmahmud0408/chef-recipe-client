@@ -5,6 +5,7 @@ import Racipe from './Recipe'
 import CircularProgress from "@mui/material/CircularProgress";
 import { Box } from '@mui/material';
 
+
 const ChefDetails = () => {
     const [isFetching, setIsFetching] = useState(true);
     const chefDetails = useLoaderData()

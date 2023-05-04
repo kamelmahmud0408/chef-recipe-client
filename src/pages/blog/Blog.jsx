@@ -5,6 +5,12 @@ const Blog = () => {
     const ref = React.createRef();
     return (
         <div className='container mx-auto'>
+            <div className='text-center'>
+                <Pdf targetRef={ref} filename="code-example.pdf">
+                    {({ toPdf }) => <button className='btn btn-primary my-5 ' onClick={toPdf}>Generate Pdf</button>}
+                </Pdf>
+
+            </div>
             <div className=' ' ref={ref}>
                 <div >
 
@@ -67,15 +73,6 @@ const Blog = () => {
 
                 </div>
             </div>
-
-            <div className='text-center'>
-                <Pdf targetRef={ref} filename="code-example.pdf">
-                    {({ toPdf }) => <button className='btn btn-primary my-5 ' onClick={toPdf}>Generate Pdf</button>}
-                </Pdf>
-
-            </div>
-
-
         </div>
     );
 };

@@ -38,10 +38,10 @@ const Home = () => {
                 <section className='container mx-auto'>
                     <div className='text-center p-20'>
                         <h1 className='text-4xl text-blue-600 font-bold mb-3'>
-                            Our Most Selected Menu
+                            Our Most Selected Food
                         </h1>
                         <p>
-                            Excellent! Got a Murgh Biryani and it tasted just perfect. You can taste the different flavours, rice cooked to perfection and the chicken succulent.
+                        These are the most frequently selected dishes of our customers, served by our chefs through their tireless efforts, take love and enjoy.
                         </p>
                     </div>
                     <div className='grid lg:grid-cols-3 gap-8'>

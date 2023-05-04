@@ -38,7 +38,7 @@ const Regestration = () => {
         const loggedUser = result.user;
         updateUser(loggedUser, name, photo)
         logOut(navigate(from, { replace: true }))
-
+        
         console.log(loggedUser)
         
 
@@ -64,7 +64,7 @@ const Regestration = () => {
   const handleGoogle=()=>{
     signInwithGoogle()
     .then(()=>{
-        navigate(from,{replace :true})
+        navigate(location.state?.from?.pathname || '/',{replace :true})
     })
     .cacth(error=>{
       console.log(error)
@@ -74,7 +74,7 @@ const Regestration = () => {
   const handleGithub=()=>{
     signInwithGithub()
     .then(result=>{
-        navigate(from,{replace :true})
+        navigate(location.state?.from?.pathname || '/',{replace :true})
     })
     .cacth((error)=>{
       console.log(error)
@@ -107,13 +107,13 @@ const Regestration = () => {
           <input className='border w-96 p-2 mt-4' type="password" name="confirm" id="" placeholder='Your Confirm Password' required />
         </div>
         <input className='mt-7 border text-xl py-2 px-5 rounded-md text-white bg-blue-600' type="submit" value="Submit" />
-        <p><small>{error}</small></p>
+        <p className='text-red-600 mt-4'><small>{error}</small></p>
       </form>
       <div className='mt-10 w-full'>
         <button onClick={handleGoogle} className='btn btn-primary w-96'>Login with Google</button>
         <button onClick={handleGithub} className='btn btn-primary w-96 mt-5'>Login with Github</button>
       </div>
-      <p className='mt-5'><span>  Already have Account Please <Link className='text-blue-600'  to="/login">login</Link></span></p>
+      <p className='mt-5'><span>  Already have Account ? Please <Link className='text-blue-600'  to="/login">login</Link></span></p>
     </div>
 
   );

@@ -2,6 +2,8 @@
 import React, { useState } from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 
 const Recipe = ({ recipe }) => {
 
@@ -23,12 +25,12 @@ const Recipe = ({ recipe }) => {
         <div className="card-body ">
           <h2 className="card-title font-bold">{recipe_name}</h2>
           <div>
-           <h1 className='text-xl font-semibold '>Ingradients</h1>
-          <div className='grid grid-cols-2 mt-3'>
-            {
-              ingredients.map(i => <li>{i}</li>)
-            }
-          </div>
+            <h1 className='text-xl font-semibold '>Ingradients</h1>
+            <div className='grid grid-cols-2 mt-3'>
+              {
+                ingredients.map(i => <li>{i}</li>)
+              }
+            </div>
           </div>
           <h1 className='text-xl font-semibold'>Cooking Method</h1>
           <div >
@@ -36,15 +38,17 @@ const Recipe = ({ recipe }) => {
               cooking_method.map(m => <li>{m}</li>)
             }
           </div>
-          <div className='flex justify-between items-center mt-10 '>
+         
+            <div className='flex gap-2 mt-5'>
             <p> Rating: {rating}</p>
+              <Rating style={{ maxWidth: 100 }} value={rating} readOnly />
+            </div>
             <div  >
               <input name='massege' value={massege} type="text" onChange={event => setmassege(event.target.value)} />
-              <button onClick={handleFavourite} className='btn btn-primary '>favourite</button>
+              <button onClick={handleFavourite} className='btn btn-primary w-full'>favourite</button>
               <ToastContainer />
             </div>
-          </div>
-
+      
         </div>
       </div>
     </div>
