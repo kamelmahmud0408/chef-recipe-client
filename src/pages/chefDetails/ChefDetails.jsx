@@ -13,13 +13,11 @@ const ChefDetails = () => {
     useEffect(() => {
 
         setTimeout(function () {
-            console.log("Delayed for 5 second.");
             setIsFetching(false);
         }, 1000);
     }, []);
 
-    console.log(chefDetails)
-    const { description, experience, img_url, name, likes, number_of_recipes, recipes } = chefDetails;
+    const { id, description, experience, img_url, name, likes, number_of_recipes, recipes } = chefDetails;
     return (
         <div>
             {

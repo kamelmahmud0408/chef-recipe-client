@@ -10,8 +10,8 @@ const ChefCart = ({ chef }) => {
         <div>
             <div className="card w-full h-full bg-base-100 shadow">
                <div>
-               <LazyLoad height={250} offset={300} >
-                <img className='w-full h-64' src={img_url} alt="Shoes" />
+               <LazyLoad  offset={300} threshold={0.95} >
+                <img className='w-full h-64' src={img_url} alt="chef" />
                 </LazyLoad>
                </div>
                 <div className="card-body">

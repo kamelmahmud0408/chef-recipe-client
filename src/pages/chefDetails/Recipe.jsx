@@ -7,15 +7,12 @@ import '@smastrom/react-rating/style.css'
 
 const Recipe = ({ recipe }) => {
 
-
   const [massege, setmassege] = useState('')
-  console.log(recipe)
   const { recipe_name, rating, ingredients, cooking_method } = recipe;
 
   const handleFavourite = (event) => {
     event.currentTarget.disabled = true;
     toast("add to faovorite!")
-
 
   }
 
