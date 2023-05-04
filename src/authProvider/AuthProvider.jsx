@@ -38,6 +38,7 @@ const AuthProvider = ({children}) => {
         return signOut(auth);
     }
   const updateUser=()=>{
+    setUser(currentUser)
     return updateProfile(auth.currentUser,(name,photo))
   }
    

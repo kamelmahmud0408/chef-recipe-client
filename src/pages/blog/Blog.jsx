@@ -5,7 +5,7 @@ const Blog = () => {
     const ref = React.createRef();
     return (
         <div className='container mx-auto'>
-            <div className=' w-[80%] ' ref={ref}>
+            <div className=' ' ref={ref}>
                 <div >
 
                     <h1 className='text-4xl mt-10'>Question-1</h1>
@@ -40,13 +40,39 @@ const Blog = () => {
                     <hr className='mt-3 text-slate-600' />
 
                 </div>
+                <div>
+                    <h1 className='text-4xl mt-10'>Question-3</h1>
+                    <h3 className='text-xl mt-3'>The difference between nodejs and express js</h3>
+                    <p className='mt-5'>
+                        Node.js and Express.js are both popular web development frameworks for building server-side applications using JavaScript. While they are related, they have different purposes and functionality.
+                        <br />
+                        Node.js is a JavaScript runtime built on the V8 JavaScript engine that allows you to run JavaScript code outside of the browser, on the server-side. It provides a set of built-in libraries and modules that allow developers to build server-side applications using JavaScript. Node.js is efficient, scalable, and can handle a large number of concurrent connections.
+                        <br />
+                        Express.js, on the other hand, is a minimalist and flexible Node.js web application framework that allows you to build web applications and APIs quickly and easily. It provides a set of features and tools for building web applications, such as routing, middleware, and templating engines. Express.js is often used in conjunction with Node.js to simplify web application development.
+                    </p>
+                    <hr className='mt-3 text-slate-600' />
+
+                </div>
+                <div>
+                    <h1 className='text-4xl mt-10'>Question-4</h1>
+                    <h3 className='text-xl mt-3'>What is a custom hook, and why will you create a custom hook?</h3>
+                    <p className='mt-5'>
+                        In React, a custom hook is a reusable piece of logic that encapsulates and abstracts away some functionality that can be shared across multiple components. It's essentially a JavaScript function that starts with the use keyword, and can use built-in React hooks, such as useState, useEffect, useContext, and others.
+                            <br />
+                        A custom hook allows you to extract common functionality from components and reuse it in other parts of your application. This can help to reduce code duplication, improve code organization, and make your code more modular and reusable.
+                         <br />
+                        You might create a custom hook when you find yourself duplicating code across multiple components that have similar behavior or when you want to share functionality that requires state management or side effects. For example, you might create a custom hook to fetch data from an API, manage form state, or handle window resize events.
+                    </p>
+                    <hr className='mt-3 text-slate-600' />
+
+                </div>
             </div>
 
             <div className='text-center'>
                 <Pdf targetRef={ref} filename="code-example.pdf">
                     {({ toPdf }) => <button className='btn btn-primary my-5 ' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
-                
+
             </div>
 
 
