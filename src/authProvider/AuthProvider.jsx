@@ -1,4 +1,4 @@
-import React, { Children, createContext, useEffect, useState } from 'react';
+import React, { createContext, useEffect, useState } from 'react';
 import app from '../firebase/firebase.conflig';
 import { GithubAuthProvider, GoogleAuthProvider, createUserWithEmailAndPassword, getAuth, onAuthStateChanged, signInWithEmailAndPassword, signInWithPopup, signOut, updateProfile } from "firebase/auth";
 
@@ -37,7 +37,9 @@ const AuthProvider = ({children}) => {
     const logOut = () => {
         return signOut(auth);
     }
-
+  const updateUser=()=>{
+    return updateProfile(auth.currentUser,(name,photo))
+  }
    
 
     useEffect( ()=>{
@@ -47,7 +49,7 @@ const AuthProvider = ({children}) => {
             setLoading(false);
         });
 
-        // stop observing while unmounting 
+        
         return () =>{
             return unsubscribe();
         }
@@ -62,7 +64,8 @@ const AuthProvider = ({children}) => {
         logOut,
         loading,
         signInwithGoogle,
-        signInwithGithub
+        signInwithGithub,
+        updateUser
     }
     
 

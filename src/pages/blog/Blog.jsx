@@ -5,7 +5,7 @@ const Blog = () => {
     const ref = React.createRef();
     return (
         <div className='container mx-auto'>
-            <div ref={ref}>
+            <div className=' w-[80%] ' ref={ref}>
                 <div >
 
                     <h1 className='text-4xl mt-10'>Question-1</h1>

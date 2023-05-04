@@ -11,32 +11,31 @@ const Home = () => {
 
     const [isFetching, setIsFetching] = useState(true);
     const chefData = useLoaderData()
-    // useEffect(() => {
+    useEffect(() => {
 
-    //     setTimeout(function () {
-    //         console.log("Delayed for 5 second.");
-    //         setIsFetching(false);
-    //     }, 7000);
-    // }, []);
+        setTimeout(function () {
+            console.log("Delayed for 5 second.");
+            setIsFetching(false);
+        }, 2000);
+    }, []);
 
-    if (!isFetching) {
-        return (
-            <Box sx={{ display: "flex", justifyContent: "center" }}>
-                <CircularProgress />
 
-            </Box>
-
-        );
-    }
-    else {
-        return (
+    
+     
+     return (
             <div className='bg-gray-100'>
                 <Banner></Banner>
-                <div className='grid lg:grid-cols-3 gap-5 mt-10 container mx-auto'>
-                    {
-                        chefData.map(chef => <ChefCart chef={chef} key={chef.id}></ChefCart>)
-                    }
-                </div>
+                {
+                    isFetching ? <Box sx={{ display: "flex", justifyContent: "center" }}>
+                        <CircularProgress />
+
+                    </Box> :
+                        <div className='grid lg:grid-cols-3 gap-5 mt-10 container mx-auto'>
+                            {
+                                chefData.map(chef => <ChefCart chef={chef} key={chef.id}></ChefCart>)
+                            }
+                        </div>
+                }
                 <section className='container mx-auto'>
                     <div className='text-center p-20'>
                         <h1 className='text-4xl text-blue-600 '>
@@ -84,14 +83,13 @@ const Home = () => {
                     <h1 className='text-4xl text-blue-600 text-center  pt-10  '>About Us</h1>
                     <div className='  '>
                         <p className='text-xl p-5 '>Launched in 2014, ChefZone was founded with the goal of revolutionizing Hawaii’s foodservice industry. Harnessing the buying power of our parent company  and our partnership with the International Marketing Alliance (IMA), ChefZone offers thousands of unique local and national products many of which are available nowhere else in Hawaii.
-                        Our wholesale club contains over 5,000 food and restaurant supply essentials in our 45,000-square-foot facility. Members also have access to our demonstration kitchen and catering concepts showroom.</p>
+                            Our wholesale club contains over 5,000 food and restaurant supply essentials in our 45,000-square-foot facility. Members also have access to our demonstration kitchen and catering concepts showroom.</p>
                     </div>
                 </section>
 
             </div>
         );
-    }
+     };
 
-};
 
 export default Home;

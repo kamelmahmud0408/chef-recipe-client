@@ -6,7 +6,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 const Regestration = () => {
 
   const [error, setError] = useState('')
-  const { createUser } = useContext(AuthContext)
+  const { createUser,updateUser } = useContext(AuthContext)
   const handleSignUp = (event) => {
     event.preventDefault()
 
@@ -29,12 +29,14 @@ const Regestration = () => {
     createUser(email, password)
       .then(result => {
         const loggedUser = result.user;
-        const auth = getAuth();
-        updateProfile(auth.currentUser, (name,photo)).then(() => {
-               
-          }).catch((error) => {
-            
-          });
+        updateUser(name,photo)
+        .then(result=>{
+          console.log(result)
+        })
+        .catch(error=>{
+          console.log(error)
+        })
+        
         console.log(loggedUser)
       })
       .catch(error => {
@@ -52,11 +54,11 @@ const Regestration = () => {
       <h2 className='text-3xl font-bold '>Please Sign Up</h2>
       <form onSubmit={handleSignUp}>
         <div>
-          <label htmlFor="email">Name</label> <br />
+          <label htmlFor="name">Name</label> <br />
           <input className='border w-96 p-2 mt-4' type="text" name="displayName" id="" placeholder='Your Name' required />
         </div>
         <div>
-          <label htmlFor="email">Photo URL</label> <br />
+          <label htmlFor="photo">Photo URL</label> <br />
           <input className='border w-96 p-2 mt-4' type="text" name="photo" id="" placeholder='Your Photo URL' required />
         </div>
         <div>
