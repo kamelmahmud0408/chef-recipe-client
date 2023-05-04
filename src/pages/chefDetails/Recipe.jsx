@@ -21,13 +21,16 @@ const Recipe = ({ recipe }) => {
     <div className='my-10 '>
       <div className="card w-full h-full bg-base-100 shadow-xl ">
         <div className="card-body ">
-          <h2 className="card-title">{recipe_name}</h2>
-          <div className='grid grid-cols-2'>
+          <h2 className="card-title font-bold">{recipe_name}</h2>
+          <div>
+           <h1 className='text-xl font-semibold '>Ingradients</h1>
+          <div className='grid grid-cols-2 mt-3'>
             {
               ingredients.map(i => <li>{i}</li>)
             }
           </div>
-          <h1>Cooking Method</h1>
+          </div>
+          <h1 className='text-xl font-semibold'>Cooking Method</h1>
           <div >
             {
               cooking_method.map(m => <li>{m}</li>)

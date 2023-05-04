@@ -30,7 +30,7 @@ const Login = () => {
   }
   const handleGoogle=()=>{
     signInwithGoogle()
-    .then(result=>{
+    .then(()=>{
         navigate(from,{replace :true})
     })
     .cacth(error=>{
@@ -43,7 +43,7 @@ const Login = () => {
     .then(result=>{
         navigate(from,{replace :true})
     })
-    .cacth(error=>{
+    .cacth((error)=>{
       console.log(error)
     })
   }

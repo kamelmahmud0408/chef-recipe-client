@@ -17,8 +17,8 @@ const ChefCart = ({ chef }) => {
                     </h2>
                     <div className='flex justify-between'>
                         <div >
-                            <p> Experience:  {experience}</p>
-                            <p>Number of recipes: {number_of_recipes}</p>
+                            <p className='font-semibold'> Experience:  {experience}</p>
+                            <p className='font-semibold'>Number of recipes: {number_of_recipes}</p>
                         </div>
                         <div>
                             <p className='flex'> <HandThumbUpIcon className="h-6 w-6 text-blue-500 me-2" /><span>{likes}</span></p>

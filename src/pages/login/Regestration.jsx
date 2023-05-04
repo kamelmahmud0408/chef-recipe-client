@@ -1,12 +1,15 @@
 import React, { useContext, useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
-import { getAuth, updateProfile } from 'firebase/auth';
+import {  updateProfile } from 'firebase/auth';
 
 const Regestration = () => {
+  const navigate=useNavigate()
+  const location=useLocation()
+  const from=location.state?.from?.pathname || '/login'
 
   const [error, setError] = useState('')
-  const { createUser} = useContext(AuthContext)
+  const { createUser,logOut} = useContext(AuthContext)
   const handleSignUp = (event) => {
     event.preventDefault()
 
@@ -30,7 +33,10 @@ const Regestration = () => {
       .then(result => {
         const loggedUser = result.user;
         updateUser(loggedUser,name,photo)
+        logOut(navigate(from,{replace :true}))
+        
         console.log(loggedUser)
+
       })
       .catch(error => {
         console.log(error)
