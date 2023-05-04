@@ -10,7 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.10.8",
+    "@emotion/styled": "^11.10.8",
     "@heroicons/react": "^2.0.17",
+    "@mui/material": "^5.12.3",
     "@react-icons/all-files": "^4.1.0",
     "daisyui": "^2.51.6",
     "firebase": "^9.21.0",

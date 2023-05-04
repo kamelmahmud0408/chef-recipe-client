@@ -3,7 +3,7 @@ import React from 'react';
 const Banner = () => {
     return (
         <div className='bg-gray-100'>
-            <div className='container mx-auto flex'>
+            <div className='container mx-auto lg:flex'>
                 <img className='w-full mt-10 rounded-lg' src="https://i.ibb.co/1J6wLVB/chef-cooking-harmony-woman-food-big-pot-89485044-removebg-preview.png" alt="" />
                 <div className='h-96 flex justify-center items-center text-center'>
                     <div>

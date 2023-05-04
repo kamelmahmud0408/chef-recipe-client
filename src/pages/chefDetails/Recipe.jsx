@@ -37,7 +37,7 @@ const Recipe = ({ recipe }) => {
             <p> Rating: {rating}</p>
             <div  >
               <input name='massege' value={massege} type="text" onChange={event => setmassege(event.target.value)} />
-              <button onClick={handleFavourite} className='btn btn-primary px-6'>fovrite</button>
+              <button onClick={handleFavourite} className='btn btn-primary '>favourite</button>
               <ToastContainer />
             </div>
           </div>
