@@ -1,10 +1,11 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/AuthProvider';
 
-const Login = () => {
 
-    const{signIn,signInwithGoogle,signInwithGithub}=useContext(AuthContext)
+const Login = () => {
+  
+  const{signIn,signInwithGoogle,signInwithGithub}=useContext(AuthContext)
   const navigate=useNavigate()
   const location=useLocation()
 
@@ -16,6 +17,7 @@ const Login = () => {
     const form= event.target;
     const email=form.email.value;
     const password=form.password.value;
+    
 
     signIn(email,password)
     .then(result=>{
@@ -26,6 +28,7 @@ const Login = () => {
     })
     .catch(error=>{
       console.log(error)
+      
     })
   }
   const handleGoogle=()=>{
@@ -66,9 +69,9 @@ const Login = () => {
             </form>
             <div className='mt-10 w-full'>
                   <button onClick={handleGoogle}  className='btn btn-primary w-96'>Login with Google</button>
-                  <button onClick={handleGithub}  className='btn btn-primary w-96 mt-10'>Login with Github</button>
+                  <button onClick={handleGithub}  className='btn btn-primary w-96 mt-5'>Login with Github</button>
             </div>
-            <p><span>  Don't Have an Account? <Link to="/regestration">Register</Link></span></p>
+            <p className='mt-5'><span>  Don't Have an Account? <Link className='text-blue-600' to="/regestration">Register</Link></span></p>
            </div>
         
     );
