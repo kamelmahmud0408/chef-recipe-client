@@ -5,6 +5,7 @@ import ChefCart from './ChefCart';
 
 
 
+
 const Home = () => {
     const chefData = useLoaderData()
 
@@ -59,7 +60,7 @@ const Home = () => {
                 </div>
             </section>
             <section>
-                
+
             </section>
         </div>
     );
