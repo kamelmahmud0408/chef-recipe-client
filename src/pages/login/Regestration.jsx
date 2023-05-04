@@ -6,7 +6,7 @@ import { getAuth, updateProfile } from 'firebase/auth';
 const Regestration = () => {
 
   const [error, setError] = useState('')
-  const { createUser,updateUser } = useContext(AuthContext)
+  const { createUser} = useContext(AuthContext)
   const handleSignUp = (event) => {
     event.preventDefault()
 
@@ -29,20 +29,24 @@ const Regestration = () => {
     createUser(email, password)
       .then(result => {
         const loggedUser = result.user;
-        updateUser(name,photo)
-        .then(result=>{
-          console.log(result)
-        })
-        .catch(error=>{
-          console.log(error)
-        })
-        
+        updateUser(loggedUser,name,photo)
         console.log(loggedUser)
       })
       .catch(error => {
         console.log(error)
         setError(error)
       })
+
+      const updateUser=(loggedUser,name,photo)=>{
+        updateProfile(loggedUser,{
+          displayName:name,
+          photoURL:photo,
+        })
+        .then(()=>{})
+        .catch((error)=>{
+          console.log(error)
+        })
+      }
 
      
 

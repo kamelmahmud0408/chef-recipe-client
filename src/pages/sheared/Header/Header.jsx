@@ -15,7 +15,7 @@ const Header = () => {
 
     return (
         <div className='bg-blue-300'>
-            <div className="navbar container mx-auto  ">
+            <div className="navbar container mx-auto p-5 ">
                 <div className="flex-1">
                     <a className="btn btn-ghost normal-case text-3xl text-black font-bold">Food Station</a>
                 </div>
@@ -25,7 +25,7 @@ const Header = () => {
                         <NavLink className={({ isActive }) => (isActive ? 'text-blue-900 ' : 'text-white')} to='/blog'>Blog</NavLink>
                       {
                         user ? <div>{
-                            user && <span className='text-white'> {user.email} <button onClick={handleLogout}> Log out</button></span>
+                            user && <span className='text-white flex gap-4'><div className='tooltip' data-tip={user.displayName}><img title={user.displayName} className='w-10 h-10 rounded-full tooltip '   src={user.photoURL}  alt="" /></div> <button onClick={handleLogout}> Log out</button></span>
                         }</div> :<Link to='/login'><button className='text-white'>Login</button></Link>
                       }
                         
