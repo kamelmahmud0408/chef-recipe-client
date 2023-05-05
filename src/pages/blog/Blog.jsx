@@ -6,15 +6,17 @@ const Blog = () => {
     return (
         <div className='container mx-auto'>
             <h1 className=' my-4 text-4xl text-blue-600 text-center  pt-10 font-bold'>Answer the Questions Mentioned in the Assignment</h1>
+
+            {/* pdf genarate */}
             <div className='text-center'>
                 <Pdf targetRef={ref} filename="code-example.pdf">
                     {({ toPdf }) => <button className='btn btn-primary my-5 ' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
 
             </div>
+            {/* questin-1 */}
             <div className='p-5 ' ref={ref}>
                 <div >
-
                     <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-1</h1>
                     <h3 className='text-xl mt-3'>the differences between uncontrolled and controlled components</h3>
                     <p className='mt-5'>
@@ -27,6 +29,7 @@ const Blog = () => {
                     <hr className='mt-3 text-slate-600' />
                 </div>
 
+              {/* questin-2 */}
                 <div>
 
                     <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-2</h1>
@@ -47,6 +50,8 @@ const Blog = () => {
                     <hr className='mt-3 text-slate-600' />
 
                 </div>
+
+                {/* questin-3 */}
                 <div>
                     <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-3</h1>
                     <h3 className='text-xl mt-3'>The difference between nodejs and express js</h3>
@@ -60,6 +65,8 @@ const Blog = () => {
                     <hr className='mt-3 text-slate-600' />
 
                 </div>
+
+                {/* questin-4 */}
                 <div>
                     <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-4</h1>
                     <h3 className='text-xl mt-3'>What is a custom hook, and why will you create a custom hook?</h3>

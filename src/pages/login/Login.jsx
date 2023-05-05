@@ -13,6 +13,8 @@ const Login = () => {
 
   const from = location.state?.from?.pathname || '/'
 
+    // login and error setup
+
   const handleLogin = (event) => {
     event.preventDefault()
 
@@ -34,6 +36,9 @@ const Login = () => {
 
       })
   }
+
+  // google login
+
   const handleGoogle = () => {
     signInwithGoogle()
       .then(() => {
@@ -43,6 +48,8 @@ const Login = () => {
         console.log(error)
       })
   }
+
+  // github login
 
   const handleGithub = () => {
     signInwithGithub()

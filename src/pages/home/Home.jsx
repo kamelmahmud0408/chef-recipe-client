@@ -22,6 +22,7 @@ const Home = () => {
      return (
             <div className=''>
                 <Banner></Banner>
+                {/* Chefs section */}
                 {
                     isFetching ? <Box sx={{ display: "flex", justifyContent: "center" }}>
                         <CircularProgress />
@@ -38,6 +39,7 @@ const Home = () => {
                         </div>
                         </section>
                 }
+                {/* extra section-1 most selected recipes */}
                 <section className='container mx-auto'>
                     <div className='text-center p-20'>
                         <h1 className='text-4xl text-blue-600 font-bold mb-3'>
@@ -80,7 +82,7 @@ const Home = () => {
                         </div>
                     </div>
                 </section>
-
+                     {/* extra section-2 About us  */}
                 <section className='container mx-auto p-20 '>
                     <h1 className='text-4xl text-blue-600 text-center  pt-10 font-bold '>About Us</h1>
                     <div className=' lg:flex gap-6 mt-5 p-5'>

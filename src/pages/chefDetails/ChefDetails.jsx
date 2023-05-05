@@ -10,6 +10,8 @@ const ChefDetails = () => {
     const [isFetching, setIsFetching] = useState(true);
     const chefDetails = useLoaderData()
 
+    // loading spinner code
+
     useEffect(() => {
 
         setTimeout(function () {
@@ -41,6 +43,8 @@ const ChefDetails = () => {
                             </div>
                         </div>
                     </div>
+
+                    {/* recipes section */}
                     <section className='container mx-auto '>
                         <div className='text-center '>
                         <h1 className='text-4xl text-blue-600  pt-10 font-bold '> Recipes</h1>

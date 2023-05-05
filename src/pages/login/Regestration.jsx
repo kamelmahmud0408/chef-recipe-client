@@ -21,6 +21,9 @@ const Regestration = () => {
     const confirm = form.confirm.value;
 
     setError('')
+     
+    // error setup
+
     if (password !== confirm) {
       setError('Your password did not match')
       return
@@ -30,6 +33,8 @@ const Regestration = () => {
       return
     }
     
+    //  create user
+
     createUser(email, password)
       .then(result => {
         const loggedUser = result.user;
@@ -42,6 +47,8 @@ const Regestration = () => {
         console.log(error)
         setError(error)
       })
+
+      // profile update
 
     const updateUser = (loggedUser, name, photo) => {
       updateProfile(loggedUser, {
@@ -56,6 +63,8 @@ const Regestration = () => {
 
   }
 
+  // google login
+
   const handleGoogle = () => {
     signInwithGoogle()
       .then(() => {
@@ -65,6 +74,8 @@ const Regestration = () => {
         console.log(error)
       })
   }
+
+  // github login
 
   const handleGithub = () => {
     signInwithGithub()
