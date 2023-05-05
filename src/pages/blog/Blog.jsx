@@ -5,16 +5,17 @@ const Blog = () => {
     const ref = React.createRef();
     return (
         <div className='container mx-auto'>
+            <h1 className=' my-4 text-4xl text-blue-600 text-center  pt-10 font-bold'>Answer the Questions Mentioned in the Assignment</h1>
             <div className='text-center'>
                 <Pdf targetRef={ref} filename="code-example.pdf">
                     {({ toPdf }) => <button className='btn btn-primary my-5 ' onClick={toPdf}>Generate Pdf</button>}
                 </Pdf>
 
             </div>
-            <div className=' ' ref={ref}>
+            <div className='p-5 ' ref={ref}>
                 <div >
 
-                    <h1 className='text-4xl mt-10'>Question-1</h1>
+                    <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-1</h1>
                     <h3 className='text-xl mt-3'>the differences between uncontrolled and controlled components</h3>
                     <p className='mt-5'>
                         Components refer to reusable pieces of code that can be combined to create larger software systems. There are two main types of components: uncontrolled and controlled components.
@@ -28,7 +29,7 @@ const Blog = () => {
 
                 <div>
 
-                    <h1 className='text-4xl mt-10'>Question-2</h1>
+                    <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-2</h1>
                     <h3 className='text-xl mt-3'>How to validate React props using PropTypes</h3>
                     <p className='mt-5'>
                         React PropTypes is a library that allows you to validate the props passed to your React components at runtime. PropTypes provide a way to ensure that the data types of props passed to a component match what the component expects. This helps to catch errors and prevent bugs before they occur.
@@ -47,7 +48,7 @@ const Blog = () => {
 
                 </div>
                 <div>
-                    <h1 className='text-4xl mt-10'>Question-3</h1>
+                    <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-3</h1>
                     <h3 className='text-xl mt-3'>The difference between nodejs and express js</h3>
                     <p className='mt-5'>
                         Node.js and Express.js are both popular web development frameworks for building server-side applications using JavaScript. While they are related, they have different purposes and functionality.
@@ -60,7 +61,7 @@ const Blog = () => {
 
                 </div>
                 <div>
-                    <h1 className='text-4xl mt-10'>Question-4</h1>
+                    <h1 className='text-4xl mt-10 font-bold text-blue-500'>Question-4</h1>
                     <h3 className='text-xl mt-3'>What is a custom hook, and why will you create a custom hook?</h3>
                     <p className='mt-5'>
                         In React, a custom hook is a reusable piece of logic that encapsulates and abstracts away some functionality that can be shared across multiple components. It's essentially a JavaScript function that starts with the use keyword, and can use built-in React hooks, such as useState, useEffect, useContext, and others.

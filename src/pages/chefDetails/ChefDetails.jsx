@@ -41,10 +41,17 @@ const ChefDetails = () => {
                             </div>
                         </div>
                     </div>
-                    <section className='container mx-auto grid lg:grid-cols-3'>
+                    <section className='container mx-auto '>
+                        <div className='text-center '>
+                        <h1 className='text-4xl text-blue-600  pt-10 font-bold '> Recipes</h1>
+                        <p className='mt-3'>Some of our our chefs delicious recipes are mentioned below along with their ingredients and cooking method, <br /> hope you like it,enjoy and be well</p>
+                        </div>
+                        
+                        <div className='grid lg:grid-cols-3'>
                         {
                             recipes.map(recipe => <Racipe key={recipe._id} recipe={recipe}></Racipe>)
                         }
+                        </div>
                     </section>
                 </div>
             }

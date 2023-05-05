@@ -27,7 +27,10 @@ const Home = () => {
                         <CircularProgress />
                         </Box> :
                         <section>
-                            <h1 className='text-4xl text-blue-600 font-bold text-center p-5'> Our Honorable Chefs</h1>
+                            <div className='text-center p-5'>
+                            <h1 className='text-4xl mb-3 text-blue-600 font-bold  '> Our Honorable Chefs</h1>
+                            <p>Below is the information of some of our respected chefs who have been working with the company for a long time , <br /> hope you like it,stay well.</p>
+                            </div>
                             <div className='grid lg:grid-cols-3 gap-5 mt-10 container mx-auto'>
                             {
                                 chefData.map(chef => <ChefCart chef={chef} key={chef.id}></ChefCart>)
@@ -41,7 +44,7 @@ const Home = () => {
                             Our Most Selected Food
                         </h1>
                         <p>
-                        These are the most frequently selected dishes of our customers, served by our chefs through their tireless efforts, take love and enjoy.
+                        These are the most frequently selected dishes of our customers, served by our chefs through their tireless efforts, <br /> take love and enjoy.
                         </p>
                     </div>
                     <div className='grid lg:grid-cols-3 gap-8'>
@@ -79,10 +82,13 @@ const Home = () => {
                 </section>
 
                 <section className='container mx-auto p-20 '>
-                    <h1 className='text-4xl text-blue-600 text-center  pt-10  '>About Us</h1>
-                    <div className='  '>
+                    <h1 className='text-4xl text-blue-600 text-center  pt-10 font-bold '>About Us</h1>
+                    <div className=' lg:flex gap-6 mt-5 p-5'>
+                        <img className='w-full h-96 ' src="https://i.ibb.co/D454rDy/istockphoto-1163589059-612x612-removebg-preview.png" alt="" />
+                        <div>
                         <p className='text-xl mt-5 leading-9 '>Launched in 2014, Food Station was founded with the goal of revolutionizing Hawaii’s foodservice industry. Harnessing the buying power of our parent company  and our partnership with the International Marketing Alliance (IMA), Food Station offers thousands of unique local and national products many of which are available nowhere else in Hawaii.
                             Our wholesale club contains over 5,000 food and restaurant supply essentials in our 45,000-square-foot facility. Members also have access to our demonstration kitchen and catering concepts showroom.</p>
+                        </div>
                     </div>
                 </section>
 
