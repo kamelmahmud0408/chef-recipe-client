@@ -38,7 +38,7 @@ const Login = () => {
   }
 
   // google login
-
+  
   const handleGoogle = () => {
     signInwithGoogle()
       .then(() => {
@@ -49,8 +49,7 @@ const Login = () => {
       })
   }
 
-  // github login
-
+// githublogin
   const handleGithub = () => {
     signInwithGithub()
       .then(result => {

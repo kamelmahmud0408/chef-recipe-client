@@ -74,7 +74,7 @@ const Home = () => {
                             <figure><img className='w-full h-80' src="https://images.deliveryhero.io/image/fd-bd/LH/f40s-hero.jpg" alt="" /></figure>
                             <div className="card-body">
                                 <h2 className="card-title">Beef Biriyani</h2>
-                                <p>Excellent! Got a Murgh Biryani and it tasted just perfect. You can taste the different flavours, rice cooked to perfection and the chicken succulent. Huge portion and nicely priced. Definitely the best bangladeshi in the Sudbury area I have tried so far. 100% better than the one at 621 Boston Post Rd - that place is a roadside dhaba! Keep it up Soul of Bangladesh.</p>
+                                <p>Excellent! Got a Murag biriyani and it tasted just perfect. You can taste the different flavours, rice cooked to perfection and the chicken succulent. Huge portion and nicely priced. Definitely the best bangladeshi in the Sudbury area I have tried so far. 100% better than the one at 621 Boston Post Rd - that place is a roadside dhaba! Keep it up Soul of Bangladesh.</p>
                                 <div className="card-actions ">
                                     <button className="btn btn-primary w-full mt-5">Buy Now</button>
                                 </div>

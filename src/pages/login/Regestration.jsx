@@ -9,7 +9,7 @@ const Regestration = () => {
   const from = location.state?.from?.pathname || '/login'
 
   const [error, setError] = useState('')
-  const { createUser, logOut, signInwithGoogle, signInwithGithub } = useContext(AuthContext)
+  const { createUser, logOut, } = useContext(AuthContext)
   const handleSignUp = (event) => {
     event.preventDefault()
 
@@ -62,31 +62,27 @@ const Regestration = () => {
     }
 
   }
-
-  // google login
-
   const handleGoogle = () => {
     signInwithGoogle()
       .then(() => {
-        navigate(location.state?.from?.pathname || '/', { replace: true })
+        navigate(from, { replace: true })
       })
       .cacth(error => {
         console.log(error)
       })
   }
 
-  // github login
-
+// githublogin
   const handleGithub = () => {
     signInwithGithub()
       .then(result => {
-        navigate(location.state?.from?.pathname || '/', { replace: true })
+        navigate(from, { replace: true })
       })
       .cacth((error) => {
         console.log(error)
       })
   }
-
+  
 
   return (
     <section className='container mx-auto'>
